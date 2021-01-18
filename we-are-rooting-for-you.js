@@ -2,15 +2,15 @@ function judgeVegetable(vegetables, metric) {
 
   if (metric === 'redness') {
 
-    const [Biggest] = vegetables.sort((a, b) => b.redness - a.redness)
+    let sortedArray = vegetables.sort((a, b) => b.redness - a.redness)
 
-    return Biggest.submitter;
+    return sortedArray[0].submitter;
 
   } else if (metric === 'plumpness') {
 
-    const [Plumpness] = vegetables.sort((a, b) => b.plumpness - a.plumpness)
+    let sortedArray2 = vegetables.sort((a, b) => b.plumpness - a.plumpness)
 
-    return Plumpness.submitter;
+    return sortedArray2[0].submitter
 
   } else {
 
