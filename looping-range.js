@@ -1,12 +1,11 @@
 function range(start, end, step) {
   let newArr = [];
 
-  if (start === undefined || end === undefined || step === undefined || start > end || step <= 0) {
+  if ((start === undefined || end === undefined || step === undefined || start > end || step <= 0)) {
     return [];
   } else {
-    let i = start; while (i <= end) {
-      newArr.push([i]);
-      i += step;
+    for (let i = start; i <= end; i += step) {
+      newArr.push(i);
     }
   }
   return newArr;
