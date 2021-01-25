@@ -1,25 +1,10 @@
 function judgeVegetable(vegetables, metric) {
-
-  if (metric === 'redness') {
-
-    let sortedArray = vegetables.sort((a, b) => b.redness - a.redness)
-
-    return sortedArray[0].submitter;
-
-  } else if (metric === 'plumpness') {
-
-    let sortedArray2 = vegetables.sort((a, b) => b.plumpness - a.plumpness)
-
-    return sortedArray2[0].submitter
-
-  } else {
-
-    return undefined;
-
-  }
-
+  this.val2 = metric;
+  let newArr = vegetables.sort(
+    function (a, b) { return b[this.val2] - a[this.val2] }
+    )
+  return newArr[0].submitter;
 }
-
 
 const vegetables = [
   {
@@ -39,5 +24,5 @@ const vegetables = [
   }
 ];
 
-const metric = 'redness'
+const metric = 'redness';
 console.log(judgeVegetable(vegetables, metric));
