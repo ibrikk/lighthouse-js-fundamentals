@@ -22,11 +22,11 @@ const totalVolume = function (solids) {
   let totalVolume = 0;
 
   for (const solid of solids) {
-    if (solid.type === "sphere") {
+    if (solid.type === 'sphere') {
       totalVolume += sphereVolume(solid.radius);
-    } else if (solid.type === "cone") {
+    } else if (solid.type === 'cone') {
       totalVolume += coneVolume(solid.radius, solid.height);
-    } else if (solid.type === "prism") {
+    } else if (solid.type === 'prism') {
       totalVolume += prismVolume(solid.height, solid.width, solid.depth);
     }
   }
@@ -35,17 +35,17 @@ const totalVolume = function (solids) {
 };
 
 const largeSphere = {
-  type: "sphere",
+  type: 'sphere',
   radius: 40,
 };
 
 const smallSphere = {
-  type: "sphere",
+  type: 'sphere',
   radius: 10,
 };
 
 const cone = {
-  type: "cone",
+  type: 'cone',
   radius: 3,
   height: 5,
 };
